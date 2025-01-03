@@ -1,4 +1,5 @@
 import { defineDocumentType, makeSource } from 'contentlayer/source-files'
+import rehypeSlug from 'rehype-slug'
 
 const Post = defineDocumentType(() => ({
     name: 'Post',
@@ -11,9 +12,9 @@ const Post = defineDocumentType(() => ({
             required: true,
         },
         author: {
-            type: "string",
+            type: 'string',
             description: 'The author of the post',
-            required: false
+            required: false,
         },
         summary: {
             type: 'string',
@@ -40,6 +41,9 @@ const Post = defineDocumentType(() => ({
 }))
 
 export default makeSource({
-  contentDirPath: 'posts',
-  documentTypes: [Post],
+    contentDirPath: 'posts',
+    documentTypes: [Post],
+    mdx: {
+        rehypePlugins: [rehypeSlug],
+    },
 })
