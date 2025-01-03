@@ -1,7 +1,92 @@
 ---
 title: BlockChain là gì?
 date: 2022-03-11
-summary: 'In the ever-evolving landscape of software development, the debate between dynamic and static typing continues to be a hot topic.'
+summary: ' là một công nghệ cơ sở dữ liệu phân tán ở đó dữ liệu được lưu trữ ở các khối (blocks) nối tiếp nhau theo trình tự thời gian và không thay đổi được.'
 ---
 
-When you change a source file, Contentlayer automatically updates the content cache, which prompts Next.js to reload the content on screen.
+## Blockchain (công nghệ chuỗi khối) là một công nghệ cơ sở dữ liệu phân tán (distributed ledger technology) ở đó dữ liệu được lưu trữ ở các khối (blocks) nối tiếp nhau theo trình tự thời gian và không thay đổi được, các khối (blocks) được liên kết với nhau bằng mã hóa (cryptographic hashes).
+Dưới đây là 1 số đặc điểm của blockchain:
+### 🎯 Distributed (Phân tán):
+Thay vì dữ liệu được lưu trữ tập trung một nơi duy nhất, blockchain được lưu trữ trên nhiều máy tình khác nhau trong networks (mạng lưới), làm giảm nguy cơ mất dữ liệu và tăng tính an toàn. Chính điều này làm cho mạng lưới rất khó bị shutdown.
+### 🎯 Immutable (Không thể thao đổi):
+Mỗi khi dữ liệu được thêm vào, dữ liệu đó sẽ được khi vào block (khối) mới, nó sẽ không bị thay đổi hoặc sửa chữa đặc tính của thuận toán đồng thuận và mã hash.
+### 🎯 Transparent & Secure (Minh bạch & bảo mật):
+Các dữ liệu lưu trữ trên blockchain được công khai, bất kỳ ai cũng có thể kiểm tra và truy xuất lịch sử giao dịch. Các dữ liệu trên mỗi block sẽ có một mã hash ID riêng, vì vậy dữ liệu không thể bị giả mạo.
+### 🎯 Applications (Ứng dụng):
+#### Tài chính và Ngân hàng
+Tiền điện tử (Cryptocurrency): Bitcoin, Ethereum và nhiều loại tiền điện tử khác dựa trên công nghệ blockchain để tạo ra một hệ thống thanh toán phi tập trung.
+Ngân hàng số (Digital Banking): Giảm chi phí giao dịch, tăng tính minh bạch và bảo mật trong các giao dịch tài chính.
+Hợp đồng thông minh (Smart Contracts): Tự động thực hiện các điều khoản hợp đồng khi điều kiện được đáp ứng, giảm thiểu sự can thiệp của con người và giảm rủi ro gian lận.
+
+#### Quản lý Chuỗi Cung Ứng
+Theo dõi sản phẩm: Từ nguyên liệu thô đến sản phẩm cuối cùng, blockchain giúp theo dõi và xác minh từng bước trong chuỗi cung ứng, tăng cường tính minh bạch và giảm thiểu gian lận.
+Thực phẩm an toàn: Đảm bảo nguồn gốc và chất lượng thực phẩm bằng cách lưu trữ thông tin không thể thay đổi.
+
+#### Y tế
+Quản lý hồ sơ y tế: Dữ liệu bệnh nhân có thể được lưu trữ an toàn và chia sẻ một cách bảo mật giữa các bác sĩ, bệnh viện, hoặc các cơ sở y tế khác.
+Nghiên cứu y học: Chia sẻ dữ liệu nghiên cứu mà vẫn bảo vệ quyền riêng tư của bệnh nhân.
+
+#### Bất động sản
+Chuyển nhượng tài sản: Giảm thiểu thời gian và chi phí trong quá trình chuyển nhượng bất động sản thông qua hợp đồng thông minh.
+Quản lý tài sản: Lưu trữ thông tin về các tài sản một cách minh bạch và không thể thay đổi.
+
+#### Bỏ phiếu và Bầu cử
+Bỏ phiếu điện tử: Cung cấp một hệ thống bỏ phiếu minh bạch, bảo mật và khó bị thao túng.
+
+#### Quyền Sở Hữu Trí Tuệ
+Bảo vệ bản quyền: Nghệ sĩ và nhà sáng tạo có thể dùng blockchain để chứng minh quyền sở hữu và quản lý quyền sử dụng tác phẩm của họ.
+
+#### Công nghệ IoT
+Quản lý thiết bị IoT: Tạo ra các hệ thống IoT an toàn hơn bằng cách sử dụng blockchain để xác thực và quản lý các thiết bị.
+
+Các ứng dụng này chỉ là một phần nhỏ của những gì blockchain có thể làm. Công nghệ này còn đang phát triển và tiếp tục mở rộng các lĩnh vực ứng dụng của nó.
+### 🎯 Decentralized (Phi tập trung):
+Không có một cơ quan trung tâm nào kiểm soát blockchain. Các quyết định về hệ thống thường được thực hiện thông qua sự đồng thuận của mạng lưới.
+
+## Cơ chế đồng thuận trong Blockchain
+
+Cơ chế đồng thuận trong blockchain đóng vai trò quan trọng trong việc đảm bảo tính toàn vẹn, bảo mật và trật tự của dữ liệu được lưu trữ. Dưới đây là những tác dụng chính của cơ chế đồng thuận:
+
+#### 🎯 Đảm bảo Tính Đồng Nhất: 
+Cơ chế đồng thuận giúp tất cả các node trong mạng đạt được sự đồng thuận về trạng thái hiện tại của blockchain. Điều này có nghĩa là tất cả các thành viên trong mạng đều đồng ý về danh sách các giao dịch hợp lệ và thứ tự của chúng.
+#### 🎯 Ngăn Chặn Giao Dịch Giả Mạo: 
+Bằng cách yêu cầu sự đồng ý của đa số các node trong mạng trước khi một khối mới được thêm vào chuỗi, cơ chế đồng thuận làm giảm nguy cơ giao dịch giả mạo hoặc thay đổi dữ liệu đã được ghi.
+#### 🎯 Bảo Đảm Tính Bất Biến: 
+Một khi một khối dữ liệu đã được thêm vào blockchain, việc thay đổi nó trở nên cực kỳ khó khăn do cần sự đồng ý của phần lớn mạng lưới. Điều này giúp bảo vệ dữ liệu khỏi bị thay đổi trái phép.
+#### 🎯 Chống Lại Tấn Công 51%: 
+Một số cơ chế đồng thuận như Proof of Work (PoW) hoặc Proof of Stake (PoS) đòi hỏi một lượng lớn tài nguyên (tính toán hoặc tiền đặt cược) để có thể thao túng mạng lưới. Điều này làm cho việc kiểm soát hơn 50% sức mạnh tính toán hoặc cổ phần trở nên không khả thi về mặt kinh tế.
+#### 🎯 Tăng Tính Minh Bạch và Tin Cậy: 
+Vì mọi giao dịch phải được xác nhận công khai bởi mạng lưới, cơ chế đồng thuận giúp tạo ra một hệ thống minh bạch, nơi mà mọi người có thể kiểm tra và tin tưởng vào tính chính xác của dữ liệu.
+#### 🎯 Giảm Thiểu Nhu Cầu Bên Thứ Ba: 
+Blockchain với cơ chế đồng thuận cho phép các bên tham gia giao dịch trực tiếp mà không cần đến các cơ quan trung gian, giảm chi phí và thời gian xử lý, đồng thời tăng tính riêng tư và bảo mật.
+
+Dưới đây là các cơ chế đồng thuận hiện nay:
+
+### 🎯 Proof of Work (PoW): 
+Đây là một trong những cơ chế đồng thuận đầu tiên và được sử dụng bởi Bitcoin. PoW yêu cầu các miner giải các bài toán mật mã phức tạp để xác nhận giao dịch và thêm khối vào blockchain. Nó đảm bảo tính bảo mật cao nhưng tiêu tốn nhiều năng lượng.
+
+### 🎯 Proof of Stake (PoS): 
+PoS thay thế việc sử dụng năng lượng cho việc đặt cược tiền điện tử để có cơ hội xác nhận khối. Ethereum đang chuyển từ PoW sang PoS với bản cập nhật Ethereum 2.0 để giảm thiểu tiêu thụ năng lượng và cải thiện tốc độ giao dịch.
+
+### 🎯 Delegated Proof of Stake (DPoS): 
+Đây là một biến thể của PoS, nơi người dùng bỏ phiếu chọn ra một số đại diện để xác nhận giao dịch và tạo khối. DPoS được sử dụng bởi các blockchain như EOS và Tron, giúp tăng cường hiệu suất và giảm thời gian xác nhận giao dịch.
+
+### 🎯 Proof of Authority (PoA): 
+Trong PoA, các node xác nhận giao dịch được xác định trước và đáng tin cậy. Phương thức này phù hợp cho các blockchain permissioned, nơi tốc độ xử lý giao dịch là ưu tiên nhưng giảm tính phi tập trung.
+
+### 🎯 Proof of Burn (PoB): 
+Cơ chế này yêu cầu người tham gia "đốt" (tiêu hủy) một số lượng tiền điện tử để có quyền xác nhận khối. Đây là một cách để đảm bảo tính bảo mật mà không cần tiêu tốn nhiều năng lượng như PoW.
+
+### 🎯 Proof of Capacity (PoC): 
+PoC sử dụng không gian lưu trữ của các node để xác định quyền tạo khối, thay vì sức mạnh tính toán hay số tiền đặt cược.
+
+### 🎯 Proof of Contribution (PoCo): 
+Đây là một cơ chế mới hơn nơi quyền tạo khối được dựa trên đóng góp của các node, không chỉ là số lượng tiền điện tử mà họ đặt cược.
+
+### 🎯 Proof of Reserve (PoR): 
+Cơ chế này được sử dụng bởi các sàn giao dịch tiền điện tử, các tổ chức lưu ký và các dịch vụ tài chính liên quan đến tiền điện tử để chứng minh rằng họ có đủ tài sản hoặc tiền điện tử nhằm đáp ứng các nghĩa vụ tài chính với người dùng của họ.
+
+### 🎯 Proof of Machine (PoM): 
+Đây là một hệ thống hoặc phương pháp để xác minh hoặc chứng minh rằng một máy móc hoặc thiết bị cụ thể thực sự đang thực hiện công việc hoặc cung cấp dịch vụ như đã cam kết trong một mạng lưới hoặc hệ sinh thái công nghệ.
+
+
